@@ -1,0 +1,109 @@
+ <!-- navBar -->
+ <div  ng-controller="login">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">
+                <span>
+                  <img class="logo" src="img/class/logo.jpg" alt="..." />
+                </span>
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-main">
+                <li><a href="#" ui-sref="index">首页</a></li>
+                <li><a href="#" ui-sref="index.photographs">相册</a></li>
+                <li><a href="#" ui-sref="index.activity">活动</a></li>
+                <li><a href="#" ui-sref="index.share">說說</a></li>
+              </ul>
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control input-search" placeholder="Search" />
+                  <button type="button" class="btn btn-default btn-search">
+                          <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </div>
+                
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="javascript:void(0)" ng-click="showorhide()">登录</a></li>
+                <li><a href="javascript:void(0)" ng-click="hideorshow()">注册</a></li>
+                 
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+                <div class="loginAndRegister">
+                  <div id="login"  ng-show="isShow">  
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="inputEmail1" class="col-sm-2 control-label">账号</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail1" placeholder="Email" ng-model="login.email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword1" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword1" placeholder="Password" ng-model="login.password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> 记住我
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success btn-block">登录</button>
+                      </div>
+                    </div>
+                  </form>
+                  </div>  
+                
+                  <div id="register"  ng-hide="isHide">  
+                   <form class="form-horizontal">   
+                    <div class="form-group">
+                      <label for="inputEmail2" class="col-sm-2 control-label">邮箱</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputEmail2" placeholder="Password" ng-model="login.email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="inputPassword2" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword2" placeholder="Password" ng-model="login.password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="inputPassword3" placeholder="Password reapt" ng-model="login.password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">  
+                      <div class="col-sm-offset-2 col-sm-10">  
+                          <button type="button" class="btn btn-success btn-block" ng-click="login.submit()">注册</button>  
+                      </div>  
+                    </div>  
+                   </form>  
+                  </div>  
+                </div>
+
+</div>

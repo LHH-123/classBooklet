@@ -1,0 +1,22 @@
+<div class="photo">
+
+    <div class="photo-nav row">
+    	<div class="photo-nav-left col-md-2 col-xs-2 col-lg-2">
+    		<div class="list-group photo-nav-left-link">
+    			<a ui-sref="index.photographs.photo" class="list-group-item">相       册</a>
+    			<a ui-sref="index.photographs.video" class="list-group-item">视       频</a>
+                <div class="dropdown">
+                    <a ui-sref="index.photographs.sort" class="list-group-item dropdown-toggle" data-toggle="dropdown">排        序<span class="caret"></span></a>
+                    <ul class="dropdown-menu " role="menu">
+                        <li><a href="">时      间</a></li>
+                        <li><a href="">更      新</a></li>
+                        <li><a href="">相      册</a></li>
+                    </ul>
+                </div>   			
+    		</div>
+    	</div>
+    	<div class="photo-nav-right col-md-10 col-xs-10 col-lg-10">
+    		<div class="photographs-photo-container" ui-view></div>
+    	</div>
+    </div>
+</div>
